@@ -8,6 +8,7 @@ dpkg tengine_*
 cp packages/debian/init.d /etc/init.d/nginx
 update-rc.d nginx defaults
 service nginx restart
+cd ../
 rm -rf tengine*
 
 apt-get install cmake gcc libaio-dev libncurses5-dev libreadline-dev bison perl -y
@@ -25,6 +26,9 @@ chgrp -R mysql .
 mv support-files/mysql.server /etc/init.d/mysql
 chmod 775 /etc/init.d/mysql
 update-rc.d mysql defaults
+service mysql restart
+cd ../
+rm -rf webscalsql*
 
 apt-get install gfortran
 
