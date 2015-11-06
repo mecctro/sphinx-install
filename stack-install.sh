@@ -5,7 +5,7 @@ git clone https://github.com/alibaba/tengine.git
 cd tengine
 mv packages/debian .
 DEB_BUILD_OPTIONS=nocheck dpkg-buildpackage -rfakeroot -uc -b
-dpkg tengine_*
+dpkg -i tengine_*
 cp packages/debian/init.d /etc/init.d/nginx
 update-rc.d nginx defaults
 service nginx restart
