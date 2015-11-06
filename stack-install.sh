@@ -16,9 +16,9 @@ cmake .
 make
 make install
 cd /usr/local/mysql
-sudo chown -R mysql .
-sudo chgrp -R mysql .
-sudo /usr/local/mysql/scripts/mysql_install_db -defaults-file=/usr/local/mysql/my.cnf --user=mysql
+chown -R mysql .
+chgrp -R mysql .
+/usr/local/mysql/scripts/mysql_install_db -defaults-file=/usr/local/mysql/my.cnf --user=mysql
 
 apt-get install gfortran
 
