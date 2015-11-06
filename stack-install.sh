@@ -7,6 +7,7 @@ mv packages/debian . &&
 DEB_BUILD_OPTIONS=nocheck dpkg-buildpackage -rfakeroot -uc -b &&
 dpkg -i ../tengine_*.deb &&
 cp debian/init.d /etc/init.d/nginx &&
+chmod 775 /etc/init.d/nginx &&
 update-rc.d nginx defaults &&
 service nginx restart &&
 cd ../ &&
