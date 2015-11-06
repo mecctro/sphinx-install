@@ -1,3 +1,4 @@
+apt-get install git-core -y
 apt-get install build-essential debhelper make autoconf automake patch \
  dpkg-dev fakeroot pbuilder gnupg dh-make libssl-dev libpcre3-dev -y
 git clone https://github.com/alibaba/tengine.git
