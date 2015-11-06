@@ -1,2 +1,4 @@
 # emfp
-Nginx, MySQL, Fortran_fcgi, PHP
+Nginx, MySQL, Fortran, PHP stack installer
+
+Nginx (Tengine), MySQL (WebScaleSQL), Fortran (via FastCGI), PHP (hhvm)
