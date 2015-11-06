@@ -6,7 +6,7 @@ cd tengine &&
 mv packages/debian . &&
 DEB_BUILD_OPTIONS=nocheck dpkg-buildpackage -rfakeroot -uc -b &&
 dpkg -i ../tengine_*.deb &&
-cp packages/debian/init.d /etc/init.d/nginx &&
+cp debian/init.d /etc/init.d/nginx &&
 update-rc.d nginx defaults &&
 service nginx restart &&
 cd ../ &&
