@@ -1,6 +1,6 @@
 apt-get install git-core -y
 apt-get install build-essential debhelper make autoconf automake patch \
- dpkg-dev fakeroot pbuilder gnupg dh-make libssl-dev libpcre3-dev -y
+ dpkg-dev fakeroot pbuilder gnupg dh-make libssl-dev libpcre3-dev -y &&
 git clone https://github.com/alibaba/tengine.git &&
 cd tengine &&
 mv packages/debian . &&
@@ -56,8 +56,8 @@ update-rc.d hhvm defaults &&
 sed -i 's/9000/8000/g' /etc/hhvm/server.ini &&
 sed -i 's/9000/8000/g' /etc/nginx/hhvm.conf &&
 sed -i 's/9000/8000/g' /etc/nginx/conf.d/default.conf &&
-sed -i 's/fastcgi_param.*SCRIPT_FILENAME.*/fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;/g' /etc/nginx/conf.d/default.conf &&
+sed -i 's/fastcgi_param.*SCRIPT_FILENAME.*/fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;/g' \
+ /etc/nginx/conf.d/default.conf &&
 echo 'fastcgi_keep_conn on;' >> /etc/nginx/fastcgi.conf &&
 
-apt-get install php5-fpm -y &&
-
+apt-get install php5-fpm -y ;
