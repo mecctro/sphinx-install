@@ -54,10 +54,10 @@ apt-get install hhvm -y &&
 update-rc.d hhvm defaults &&
 /usr/share/hhvm/install_fastcgi.sh &&
 sed -i 's/9000/8000/g' /etc/hhvm/server.ini &&
-sed -i 's/9000/8000/g' /etc/nginx/hhvm.conf &&
-sed -i 's/9000/8000/g' /etc/nginx/conf.d/default.conf &&
-sed -i 's/fastcgi_param.*SCRIPT_FILENAME.*/fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;/g' \
- /etc/nginx/conf.d/default.conf &&
-echo 'fastcgi_keep_conn on;' >> /etc/nginx/fastcgi.conf &&
+sed -i 's/9000/8000/g' /etc/nginx/hhvm.conf ;
 
 apt-get install php5-fpm -y ;
+
+rm -rf /etc/nginx/conf.d/default.conf &&
+wget -O /etc/nginx/conf.d/default.conf https://raw.githubusercontent.com/mecctro/emfp/master/default.conf &&
+service nginx restart;
