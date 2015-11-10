@@ -34,6 +34,7 @@ update-rc.d mysql defaults &&
 service mysql restart &&
 cd ../ &&
 ln -s /usr/local/mysql/bin/* /usr/bin &&
+cd ~ &&
 rm -rf webscalsql* ;
 
 apt-get install gfortran -y ;
