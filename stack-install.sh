@@ -62,4 +62,6 @@ apt-get install php5-fpm -y ;
 
 rm -rf /etc/nginx/conf.d/default.conf &&
 wget -O /etc/nginx/conf.d/default.conf https://raw.githubusercontent.com/mecctro/emfp/master/default.conf &&
+cp /usr/share/nginx/html/* /usr/share/nginx &&
+rm -rf /usr/share/nginx/html &&
 service nginx restart;
