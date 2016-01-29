@@ -37,16 +37,16 @@ ln -s /usr/local/mysql/bin/* /usr/bin &&
 cd ~ &&
 rm -rf webscalsql* ;
 
-apt-get install gfortran -y ;
+#apt-get install gfortran -y ;
 
-wget http://www.fastcgi.com/dist/fcgi.tar.gz &&
-tar -xzf fcgi.tar.gz &&
-cd fcgi* &&
-./configure &&
-make &&
-make install &&
-cd ../ &&
-rm -rf fcgi* ;
+#wget http://www.fastcgi.com/dist/fcgi.tar.gz &&
+#tar -xzf fcgi.tar.gz &&
+#cd fcgi* &&
+#./configure &&
+#make &&
+#make install &&
+#cd ../ &&
+#rm -rf fcgi* ;
 
 apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0x5a16e7281be7a449 &&
 echo deb http://dl.hhvm.com/debian wheezy main | sudo tee /etc/apt/sources.list.d/hhvm.list &&
