@@ -54,8 +54,8 @@ apt-get update &&
 apt-get install hhvm -y &&
 update-rc.d hhvm defaults &&
 /usr/share/hhvm/install_fastcgi.sh &&
-#sed -i 's/9000/8000/g' /etc/hhvm/server.ini &&
-#sed -i 's/9000/8000/g' /etc/nginx/hhvm.conf &&
+#sed -i 's/9000/9100/g' /etc/hhvm/server.ini &&
+#sed -i 's/9000/9100/g' /etc/nginx/hhvm.conf &&
 service hhvm restart;
 
 apt-get install php5-fpm -y ;
