@@ -1,7 +1,7 @@
-# emp
+# hemp
 Nginx, MySQL, PHP stack installer
 
-Nginx (Tengine), MySQL (WebScaleSQL), PHP (hhvm)
+HHVM, Nginx (Tengine), MySQL (WebScaleSQL), PHP (hhvm)
 
 Install
 -----
